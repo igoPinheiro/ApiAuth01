@@ -12,7 +12,7 @@ public class LoginController : ControllerBase
 {
     [HttpPost]
     [Route("login")]
-    public async Task<ActionResult<dynamic>> AuthenticateAsync([FromBody]User model)
+    public async Task<ActionResult<dynamic>> AuthenticateAsync([FromBody]UserDTO model)
     {
         var user = UserRepository.Get(model.UserName,model.Password);
 
